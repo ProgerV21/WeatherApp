@@ -90,8 +90,9 @@ public class MainActivity extends AppCompatActivity {
                     connection.disconnect();
 
                 try {
-                    if(reader != null)
+                    if (reader != null) {
                         reader.close();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             return null;
 
         }
+
         @SuppressLint("SetTextI18n")
         @Override
         protected void onPostExecute(String result) {
@@ -112,9 +114,6 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-
-
         }
     }
 }
